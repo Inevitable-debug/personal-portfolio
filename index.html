@@ -1,81 +1,75 @@
 <!doctype html>
-<html lang = "en">
+<html>
 <head>
-    <meta charset = "UTF-8">
-    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
-    <meta name = "description" content = "My Personal Website for Resume">
-    <meta name = "author" content = "Michael Mountjoy">
-    <meta name = "viewport" content = "width=device-width, initial-scale-1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel = "stylesheet" href = "index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/22b97c6a24.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE-edge">
+        <meta name = "description" content = "My Personal Website for Resume">
+        <meta name = "author" content = "Michael Mountjoy">
+        <meta name = "viewport" content = "width=device-width, initial-scale-1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel = "stylesheet" href = "index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/22b97c6a24.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
-    <div class = 'container'>
+    <div class = "container">
         <nav>
             <ul id = 'side-menu'>
-                <li><a href = "#header">Home</a></li>
-                <li><a href = "#about">About</a></li>
-                <li><a href = "#services">Services</a></li>
-                <li><a href = "#portfolio">Portfolio</a></li>
-                <li><a href = "#contact">Contact</a></li>
+                <li><a href = "#home">Home</a></li>
+                <li><a href = "#about"><li>About</a></li>
+                <li><a href = "#services"><li>Services</a></li>
+                <li><a href = "#portfolio"><li>Portfolio</a></li>
+                <li><a href = "#contact"><li>Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
-            <i class="fas fa-times" onclick="closemenu()"></i>
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
-        <div class="header-text">
+        <div class = "header-text">
             <p>Software Engineer</p>
-            <h1>Hi, I'm <span>Michael</span><br>Mountjoy from Australia</h1>
+            <h1>Hi, I'm <span>Michael</span> <br> Mountjoy from Australia</h1>
         </div>
     </div>
 </header>
-<!--about-->
-    <div id = 'about'>
-        <div class = "container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src = "images/user.png" alt = "User image">
+    <main>
+        <!--about-->
+        <div id = "about">
+            <div class = 'container'>
+                <div id = "about-img">
+                    <img src = 'images/user.png'>
                 </div>
-                <div class="about-col-2">
-                    <h1 class = "sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus, massa id fringilla luctus, augue nisl rhoncus quam, vitae consectetur ipsum turpis in metus. Cras maximus pellentesque dui, consectetur faucibus est suscipit aliquam. Duis vel arcu suscipit felis viverra luctus ac non ligula. Pellentesque cursus ultricies sem, at suscipit dui sollicitudin sit amet. Ut hendrerit consequat orci ac iaculis. Duis at neque odio. Aliquam efficitur tincidunt vestibulum. 
-                    </p>
-                    <div class="tab-titles">
-                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class = "tab-links" onclick="opentab('education')">Education</p>
-                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
-                    </div>
-                    <div class="tab-contents active-tab" id = "skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Designing mockups for Web interfaces</li>
-                            <li><span>Web Development</span><br>Frontend development of the web</li>
-                            <li><span>Javascript frameworks developer</span><br>Knowledge of Javascript, React and Typescript</li>
-                        </ul>
+                <div class = "content-wrap">
+                    <h1 class = 'main-title'>About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus, massa id fringilla luctus, augue nisl rhoncus quam, vitae consectetur ipsum turpis in metus. Cras maximus pellentesque dui, consectetur faucibus est suscipit aliquam. Duis vel arcu suscipit felis viverra luctus ac non ligula. Pellentesque cursus ultricies sem, at suscipit dui sollicitudin sit amet. Ut hendrerit consequat orci ac iaculis. Duis at neque odio. Aliquam efficitur tincidunt vestibulum </p>
+                    <ul>
+                        <li class = "tab-links active-link" onclick = "opentab('skills')">Skills</li>
+                        <li class = "tab-links" onclick = "opentab('education')">Education</li>
+                        <li class = "tab-links" onclick = "opentab('experience')">Experience</li>
+                    </ul>
+    
+                    <div id = "skills" class = "active-tab tab-contents">
+                        <p><span>UI/UX</span><br>Designing mockups for Web interfaces</p>
+                        <p><span>Web Development</span><br>Frontend development of the web</p>
+                        <p><span>Javascript frameworks developer</span><br>Knowledge of Javascript, React and Typescript</p>
                     </div>
 
-                    <div class="tab-contents" id = "education">
-                        <ul>
-                            <li><span>2020</span><br>Bachelor of I.T - In Progress</li>
-                            <li><span>2019</span><br>VCE Certificate from the Grange P-12</li>
-                        </ul>
+                    <div id = "education" class = "tab-contents">
+                        <p><span>2020</span><br>Bachelor of I.T - In Progress</p>
+                        <p><span>2019</span><br>VCE Certificate from the Grange P-12</p>
                     </div>
 
-                    <div class="tab-contents" id = "experience">
-                        <ul>
-                            <li><span>Present</span><br>No experience yet, but can't wait to get some!</li>
-                            
-                        </ul>
+                    <div id = "experience"  class = "tab-contents">
+                        <p><span>Present</span><br>No experience yet, but can't wait to get some!</p>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
     <!--services-->
     <div id="services">
         <div class="container">
-            <h1 class = "sub-title">My Services</h1>
+            <h1 class = "main-title">My Services</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -101,27 +95,27 @@
                     </p>
                     <a href = "#">Learn more</a>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!--portfolio-->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class = "sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
+    <div id = "portfolio">
+        <div class = "container">
+            <h1 class = "main-title">My Portfolio</h1>
+            <div class = "work-list">
+                <div class = "work">
                     <img src = "images/work-1.png" alt = "work image">
                     <div class = "layer">
                         <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people 
+                        <p> The app connects you to the talented people 
                             around the world. 
                             Download it from play store.
                         </p>
                         <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+
                 <div class="work">
                     <img src = "images/work-2.png" alt = "work image">
                     <div class = "layer">
@@ -133,9 +127,10 @@
                         <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+
                 <div class="work">
                     <img src = "images/work-3.png" alt = "work image">
-                    <div class = "layer">
+                    <div  class = "layer">
                         <h3>Online Shopping App</h3>
                         <p>The app connects you to the talented people 
                             around the world. 
@@ -145,61 +140,42 @@
                     </div>
                 </div>
             </div>
-            <a href = "#" class = "btn">See more</a>
         </div>
     </div>
-<!--contact-->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class = "sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>michaelbusiness005@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>0492941206</p>
-                <div class="social-icons">
-                    <a href = "https://twitter.com/itsinevitablexd"><i class="fa-brands fa-twitter"></i></a>
-                    <a href = "https://github.com/inevitable-debug"><i class="fa-brands fa-github"></i></a>
-                    <a href = "https://www.linkedin.com/in/michael-mountjoy-77991822a/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href = "https://www.instagram.com/mikeyboy42069/"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <a href = "images/my-cv.pdf" download="" class = "btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type = "text" name="Name" placeholder="Your Name" required>
-                    <input type = "email" name = "Email" placeholder = "Your Email" required>
-                    <textarea name = "Message" rows="6" placeholder="Your Message" style="resize: none"></textarea>
-                    <button type = "submit" class = "btn btn2">Submit</button>
-                </form>
-                <span id = "msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <footer><p>Copyright Kevin. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials.</p></footer>
-    </div>
-</div>
 
-    <main>
-    </main>
+    <!--contact-->
+    <div id = "contact">
+        <div class = "container">
+            <div class = "flex-container">
+                <div class="contact-details">
+                    <h1 class = "main-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>michaelbusiness005@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0492941206</p>
+                    <div class="social-icons">
+                        <a href = "https://twitter.com/itsinevitablexd"><i class="fa-brands fa-twitter"></i></a>
+                        <a href = "https://github.com/inevitable-debug"><i class="fa-brands fa-github"></i></a>
+                        <a href = "https://www.linkedin.com/in/michael-mountjoy-77991822a/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href = "https://www.instagram.com/mikeyboy42069/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href = "images/my-cv.pdf" download="" class = "cv-btn">Download CV</a>
+                </div>
+                <div class="contact-form">
+                    <form name="submit-to-google-sheet">
+                        <input type = "text" name="Name" placeholder="Your Name" required>
+                        <input type = "email" name = "Email" placeholder = "Your Email" required>
+                        <textarea name = "Message" rows="6" placeholder="Your Message" style="resize: none"></textarea>
+                        <button type = "submit" class = "submit-btn">Submit</button>
+                    </form>
+                    <span id = "msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+<footer>
+    <p>Made by Michael Mountjoy with <i class="fa-solid fa-heart"></i>. Easy Tutorials inspired this website.</p>
+</footer>
 <script src="index.js"></script>
-<script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzq5FjISTaba_2n8dYRZA4Tu4e7TqbFtyB24wxSKt5wU0r8E_cTSkwlAdpPU_vycImuNw/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById('msg')
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully!"
-                setTimeout(function() {
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-</script>
 </body>
 </html>
